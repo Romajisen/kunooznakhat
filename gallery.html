@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kunooz Nakhat - Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f4ed;
+      color: #2e4f38;
+    }
+    header {
+      background-color: #4a7856;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-container img {
+      height: 50px;
+      object-fit: contain;
+    }
+    .gallery-section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .gallery-section h1 {
+      text-align: center;
+      color: #4a7856;
+      margin-bottom: 40px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .gallery-grid a {
+      display: block;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      background-color: #4a7856;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <a href="index.html"><img src="assets/logo/favicon.jpg" alt="Kunooz Nakhat Logo" /></a>
+    </div>
+    <h2>Gallery</h2>
+  </header>
+
+  <section class="gallery-section">
+    <h1>Our Product Gallery</h1>
+    <div id="lightgallery" class="gallery-grid">
+      <a href="assets/img/PATCHOULI OIL_1.png">
+        <img src="assets/img/PATCHOULI OIL_1.png" alt="Gallery Image 1">
+      </a>
+      <a href="assets/img/PATCHOULI OIL_3.png">
+        <img src="assets/img/PATCHOULI OIL_3.png" alt="Gallery Image 2">
+      </a>
+      <a href="assets/img/PATCHOULI OIL_4.png">
+        <img src="assets/img/PATCHOULI OIL_4.png" alt="Gallery Image 3">
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Kunooz Nakhat. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script>
+  <script>
+    lightGallery(document.getElementById('lightgallery'), {
+      plugins: [lgZoom],
+      speed: 500,
+      selector: 'a'
+    });
+  </script>
+</body>
+</html>
